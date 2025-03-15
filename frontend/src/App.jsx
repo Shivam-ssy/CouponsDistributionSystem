@@ -4,7 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 const API_URL = import.meta.env.VITE_BACKEND_API || 'http://localhost:3000/api/v1';
-
+axios.defaults.withCredentials = true;
 function App() {
   const [availableCoupons, setAvailableCoupons] = useState([]);
   const [myCoupons, setMyCoupons] = useState([]);
