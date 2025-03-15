@@ -46,6 +46,10 @@ The frontend is built using Vite and React.
    ```bash
    npm install
    ```
+3.Set up .env
+```env
+VITE_BACKEND_API=http://localhost:3000/api/v1
+```
 3. Start the development server:
    ```bash
    npm run dev
