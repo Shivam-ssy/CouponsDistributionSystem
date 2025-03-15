@@ -10,12 +10,18 @@ function App() {
   const [myCoupons, setMyCoupons] = useState([]);
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [loading,setLoading]= useState(false)
   const [isError, setIsError] = useState(false);
   const [activeTab, setActiveTab] = useState('available'); 
   // Fetch available coupons and user's claimed coupons on page load
   useEffect(() => {
-    fetchAvailableCoupons();
-    fetchMyCoupons();
+    const get= async()=>{
+      setLoading(true)
+      await fetchAvailableCoupons();
+      await fetchMyCoupons();
+      setLoading(false)
+    }
+    get()
   }, []);
 
   const fetchAvailableCoupons = async () => {
@@ -124,7 +130,9 @@ function App() {
             <button className="close-message" onClick={() => setMessage('')}>×</button>
           </div>
         )}
-
+        {
+          loading && <div>Loading...</div>
+        }
         <div className="tabs">
           <button 
             className={`tab ${activeTab === 'available' ? 'active' : ''}`}
