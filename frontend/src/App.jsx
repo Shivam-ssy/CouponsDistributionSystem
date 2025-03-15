@@ -199,7 +199,7 @@ function App() {
               </div>
             ) : (
               <div className="coupons-grid">
-                {myCoupons?.lengthmy && myCoupons.map(coupon => (
+                {myCoupons?.length && myCoupons.map(coupon => (
                   <div key={coupon._id} className="coupon-card claimed">
                     <div className="claimed-badge">Claimed</div>
                     <div className="coupon-header">
