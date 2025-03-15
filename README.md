@@ -46,6 +46,10 @@ The frontend is built using Vite and React.
    ```bash
    npm install
    ```
+3.Set up .env
+```env
+VITE_BACKEND_API=http://localhost:3000/api/v1
+```
 3. Start the development server:
    ```bash
    npm run dev
@@ -61,7 +65,7 @@ The frontend is built using Vite and React.
 1. Clone the repository:
    ```bash
    git clone https://github.com/Shivam-ssy/CouponsDistributionSystem.git
-   cd coupon-distribution
+   cd CouponsDistributionSystem
    ```
 
 ### Folder Structure
